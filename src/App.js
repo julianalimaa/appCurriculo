@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import foto from './assets/foto.png';
 import Icon from 'react-native-vector-icons/Feather';
+import Card from './components/Cards';
 
 const App = () => {
   const handleRedeSocial = rede_social => {
@@ -64,36 +65,26 @@ const App = () => {
             </View>
           </View>
 
-          <View style={style.card}>
-            <View style={style.card_header}>
-              <Text style={style.card_header_text}>
-                Experiências Profissionais
-              </Text>
-            </View>
-            <View style={style.card_content}>
-              <Text style={style.card_content_text}>ERA - Real State </Text>
-              <Text style={style.card_content_text}>Hausz Brasil</Text>
-              <Text style={style.card_content_text}>ID-Subsea</Text>
-            </View>
+          <Card titulo="Experiências Profissionais">
+            <Text style={style.card_content_text}>ERA Real State</Text>
+            <Text style={style.card_content_text}>Hausz Brasil</Text>
+            <Text style={style.card_content_text}>ID-Subsea</Text>
+          </Card>
+
+          <Card titulo="Formação Acadêmica">
+            <Text style={style.card_content_text}>
+              Universidade Anhembi Morumbi
+            </Text>
+            <Text style={style.card_content_text}>
+              Faculdade de Direito do Sul de Minas
+            </Text>
+          </Card>
+
+          <View style={style.copyright}>
+            <Text style={style.copyright_text}>
+              © Copyright 2022 - Juliana Barros
+            </Text>
           </View>
-          <View style={style.card}>
-            <View style={style.card_header}>
-              <Text style={style.card_header_text}>Formações Acadêmicas</Text>
-            </View>
-            <View style={style.card_content}>
-              <Text style={style.card_content_text}>
-                Universidade Anhembi Morumbi
-              </Text>
-              <Text style={style.card_content_text}>
-                FDSM - Faculdade de Direito do Sul de Minas
-              </Text>
-            </View>
-          </View>
-        </View>
-        <View style={style.copyright}>
-          <Text style={style.copyright_text}>
-            © Copyright 2022 - Juliana Barros
-          </Text>
         </View>
       </ScrollView>
     </>
@@ -142,35 +133,14 @@ const style = StyleSheet.create({
     marginVertical: 30,
   },
 
-  card: {
-    width: '60%',
-    borderWidth: 2,
-    borderColor: '#939393',
+  copyright: {
     alignItems: 'center',
-    marginBottom: 20,
-    paddingVertical: 10,
-    backgroundColor: '#Fefefe',
-  },
-
-  card_header: {},
-
-  card_header_text: {
-    fontWeight: 'bold',
-  },
-
-  card_content: {
-    width: '100%',
-    marginVertical: 20,
+    marginVertical: 10,
   },
 
   card_content_text: {
     marginVertical: 5,
     marginHorizontal: 5,
-  },
-
-  copyright: {
-    alignItems: 'center',
-    marginVertical: 10,
   },
 
   copyright_text: {
